@@ -1,0 +1,25 @@
++-0-------------+--------+-------+
+| Animations   | Frames | Cycle |
+|--------------|--------|-------|
+| run          | 20     | loop  |
++--------------+--------+-------+
+
+Directions
+
+Each animations contains 8 directions, each direction is contained in the file name.
+
+<animation name>_<direction#>_<frame#>
+
+direction#
+0 = north
+1 = north east
+2 = east
+3 = south east
+4 = south
+5 = south west
+6 = west
+7 = north west
+
+For example attack_0_0005 is attack facing 'north', frame 5
+
+

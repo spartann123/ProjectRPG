@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamRPG", "DreamRPG.csproj", "{8155ADE7-DE12-FB17-EB2D-5F4DBE668FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamRPG.Editor", "DreamRPG.Editor.csproj", "{5184EDC7-8BE4-C36B-8588-F8264FDDAE9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8155ADE7-DE12-FB17-EB2D-5F4DBE668FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8155ADE7-DE12-FB17-EB2D-5F4DBE668FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8155ADE7-DE12-FB17-EB2D-5F4DBE668FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8155ADE7-DE12-FB17-EB2D-5F4DBE668FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5184EDC7-8BE4-C36B-8588-F8264FDDAE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5184EDC7-8BE4-C36B-8588-F8264FDDAE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5184EDC7-8BE4-C36B-8588-F8264FDDAE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5184EDC7-8BE4-C36B-8588-F8264FDDAE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
