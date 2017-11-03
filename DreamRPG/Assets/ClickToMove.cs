@@ -6,15 +6,24 @@ public class ClickToMove : MonoBehaviour {
     public float speed;
     private Vector3 position;
     public UnityEngine.AI.NavMeshAgent navAgent;
+	public SpriteRenderer sprite;
+	float time;
+	bool refreshTime;
    // public CharacterController controller;
 	// Use this for initialization
 	void Start () {
     //    position = transform.position;
         navAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+		time = Time.deltaTime;
+		refreshTime = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (refreshTime) {
+			time = Time.deltaTime;
+			refreshTime = false;
+		}
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -24,6 +33,13 @@ public class ClickToMove : MonoBehaviour {
             {
             //    position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
                 navAgent.SetDestination(hit.point);
+				if (time * 1000 <= 1) {
+					sprite.flipX = true;
+
+				} else if(time*1000 >= 2) {
+					sprite.flipX = false;
+					refreshTime = true;
+				}
             }
         }
         moveToPosition();    
