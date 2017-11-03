@@ -456,7 +456,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 7
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -481,7 +481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   navAgent: {fileID: 2136270719}
-  sprite: {fileID: 0}
+  sprite: {fileID: 2136270722}
+  time: 3
+  distanceFromPoint: {x: 0, y: 0, z: 0}
 --- !u!212 &2136270722
 SpriteRenderer:
   m_ObjectHideFlags: 0
