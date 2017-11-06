@@ -7,9 +7,11 @@ public class ClickToMove : MonoBehaviour {
     private Vector3 position;
     public UnityEngine.AI.NavMeshAgent navAgent;
 	public SpriteRenderer sprite;
-	public float time = 0.5f;
+	public float time = 0.4f;
 	bool refreshTime;
 	public Vector3 distanceFromPoint;
+	private float originPointX;
+	private float originPointZ;
    // public CharacterController controller;
 	// Use this for initialization
 	void Start () {
@@ -32,6 +34,8 @@ public class ClickToMove : MonoBehaviour {
         {
             if (Physics.Raycast(ray, out hit, 1000))
             {
+				originPointX = transform.position.x;
+				originPointZ = transform.position.z;
             //    position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
 				navAgent.SetDestination(hit.point);
 				distanceFromPoint = hit.point;
@@ -43,6 +47,7 @@ public class ClickToMove : MonoBehaviour {
 		}
 
         moveToPosition();    
+		chooseDirection ();
 	}
     void moveToPosition() { 
     
@@ -55,4 +60,30 @@ public class ClickToMove : MonoBehaviour {
          //   controller.SimpleMove(transform.forward * speed);
      //   }
     }
+
+
+	void chooseDirection(){
+		
+		float directionX;
+		float directionZ;
+
+		directionX = transform.position.x;
+		directionZ = transform.position.z;
+
+		if (directionX < originPointX) {
+			Debug.Log ("esquerda");
+		}	
+		if (directionX > originPointX) {
+			Debug.Log ("direita");
+		}	
+		if (directionZ > originPointZ) {
+			Debug.Log ("cima");
+		}	
+		if (directionZ < originPointZ) {
+			Debug.Log ("baixo");
+		}	
+
+
+
+	}
 }
